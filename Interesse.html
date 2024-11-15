@@ -10,7 +10,7 @@
             box-sizing: border-box;
         }
         header {
-            height: 100px;
+            height: 150px;
             position: sticky;
             top: 0;
         }
@@ -31,7 +31,6 @@
             font-weight: bold;
         }
         .flex {
-            display: flex;
             gap: 30px;
         }
         .flexbox {
@@ -42,7 +41,7 @@
             font-size: 150%;
         }
         .Überschrift {
-            font-size: 400%;
+            font-size: 380%;
             margin-top: 0;
         }
         .image-right {
@@ -80,6 +79,12 @@
         .container2 {
             justify-content: space-evenly;
         }
+        .flex-videos{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
         a {
             color: rgb(0, 0, 0);
             text-decoration: none;
@@ -92,7 +97,7 @@
             transition: 1s;
         }
         .box {
-            background-color: transparent;
+           /* background-color: transparent; +*/
             width: 120px;
             padding: 30px;
             margin: 0px;
@@ -153,10 +158,7 @@
         .footerNav{
             margin: 30px 0;
         }
-        .footerNav ul{
-            display: flex;
-            justify-content: center;
-        }
+        
         .footerNav ul li a{
             color: white;
             margin: 20px;
@@ -221,7 +223,120 @@
             background-color: #1f36bb;
             transition: 1s;
         }
-
+        /*PC*/
+        @media(min-width: 1200px){
+            .flex {
+                display: flex;
+            }
+            .footerNav ul{
+                display: flex;
+                justify-content: center;
+        }
+        .flex-PC-Videos {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        }
+        /*Handy*/
+        @media(max-width: 400px){
+            .Unterüberschrift{
+                font-weight: bold;
+                font-size: 150%;
+            }
+            .Überschrift {
+            font-size: 200%;
+            margin-top: 0;
+        }
+        .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+        .Text{
+            font-size: 75%;
+        }
+        .MaxVidWidth{
+            max-width: 100%;
+        }
+        .TextPassenVideos {
+            font-size: 130%;
+        }
+        }
+        @media screen and (max-width: 426px) and (min-width: 400px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        .handy-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Überschrift {
+            font-size: 300%;
+            margin-top: 0;
+        }
+        .MaxVidWidth{
+            max-width: 100%;
+        }
+    }
+        /*Tablet*/
+        @media screen and (max-width: 1200px) and (min-width: 426px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        }
     </style>
     <script>
         var hashtag = window.location.hash
@@ -298,58 +413,58 @@
         <div class="container container2 flex platz">
             <div>
                 <p class="fett Text">Die Posaune</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/j6i7FU5yPuA" title="Die Posaune: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/j6i7FU5yPuA" title="Die Posaune: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Das Euphonium/Bariton</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/FOeP5qGUykQ" title="Das Euphonium: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/FOeP5qGUykQ" title="Das Euphonium: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Die Tuba</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/ZhtnqUiTUFg" title="Die Tuba: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/ZhtnqUiTUFg" title="Die Tuba: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <div class="container container2 flex platz">
             <div>
                 <p class="fett Text">Die Oboe</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/2pJC22b6DOw" title="Die Oboe: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/2pJC22b6DOw" title="Die Oboe: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Das Horn</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/weNqhMCrV4g" title="Das Horn: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/weNqhMCrV4g" title="Das Horn: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Die Trompete</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/ge5q99c9kJA" title="Die Trompete: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/ge5q99c9kJA" title="Die Trompete: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
         </div>
         <div class="container container2 flex platz">
             <div>
                 <p class="fett Text">Das Xylophon</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/DJ1vnELbO2c" title="Das Xylophon: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/DJ1vnELbO2c" title="Das Xylophon: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Das Schlagzeug</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/ISnkHISBdjQ" title="Das Schlagzeug: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/ISnkHISBdjQ" title="Das Schlagzeug: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Das Fagott</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/lDVfrxMpRKs" title="Das Fagott: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/lDVfrxMpRKs" title="Das Fagott: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <div class="flex container container2 platz">
             <div>
                 <p class="fett Text">Das Saxophon</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/gFLVBN6sbqc" title="Das Saxophon: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/gFLVBN6sbqc" title="Das Saxophon: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Die Klarinetten</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/a_sUNFr1KXk" title="Die Klarinette: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/a_sUNFr1KXk" title="Die Klarinette: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
                 <p class="fett Text">Die Querflöte</p>
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/YbAckgQj3u0" title="Die Querflöte: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="MaxVidWidth" width="600" height="400" src="https://www.youtube.com/embed/YbAckgQj3u0" title="Die Querflöte: Instrumentenvorstellvideos für Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=viewport content="width= device-width, initial-scale=1">
     <title>Kreuz und Quer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -10,7 +10,7 @@
             box-sizing: border-box;
         }
         header {
-            height: 100px;
+            height: 140px;
             position: sticky;
             top: 0;
         }
@@ -30,8 +30,10 @@
         .fett {
             font-weight: bold;
         }
+        .paddingLinks{
+            padding-left: 10px;
+        }
         .flex {
-            display: flex;
             gap: 30px;
         }
         .flexbox {
@@ -42,7 +44,7 @@
             font-size: 150%;
         }
         .Überschrift {
-            font-size: 400%;
+            font-size: 380%;
             margin-top: 0;
         }
         .image-right {
@@ -71,6 +73,9 @@
             background: linear-gradient(90deg, rgba(202,201,203,1) 0%, rgba(194,194,201,1) 20%, rgba(199,200,203,1) 45%, rgba(200,201,201,1) 58%, rgba(199,199,200,1) 80%, rgba(205,202,202,1) 100%);
             
         }
+        .black {
+            color: #000;
+        }
         .white {
             color: white;
         }
@@ -79,6 +84,12 @@
         }
         .container2 {
             justify-content: space-evenly;
+        }
+        .flex-videos{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
         }
         a {
             color: rgb(0, 0, 0);
@@ -153,10 +164,7 @@
         .footerNav{
             margin: 30px 0;
         }
-        .footerNav ul{
-            display: flex;
-            justify-content: center;
-        }
+        
         .footerNav ul li a{
             color: white;
             margin: 20px;
@@ -221,7 +229,359 @@
             background-color: #1f36bb;
             transition: 1s;
         }
-
+        a {
+            color: white;
+        }
+        .ListStyle {
+            list-style: none;
+        }
+        .ArrowUeberUns, .ArrowAngebote {line-height: 1;}
+        
+        .rot{
+            background-color: red;
+        }
+        /*PC*/
+        @media(min-width: 1200px){
+            .flex {
+                display: flex;
+            }
+            .footerNav ul{
+                display: flex;
+                justify-content: center;
+        }
+        .flex-PC-Videos {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .Ebene1 {
+            font-size: 3vw;
+        }
+        .Ebene2 {
+            font-size: 0.7em;
+            display: none;
+        }
+        #openUeberUns:checked + .ClickHoverUeberUns .Ebene2 {
+            display: block;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .Ebene2 {
+            display: block;
+        }
+        .Flex-Nav{
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        .Flex-Titel{
+            padding-right:530px ;
+        }
+        .FuschPaddingTitel{
+            padding-right: 30px;
+        }
+        }
+        /*kleines Handy*/
+        @media(max-width: 400px){
+            .Unterüberschrift{
+                font-weight: bold;
+                font-size: 150%;
+            }
+            .Überschrift {
+            font-size: 200%;
+            margin-top: 0;
+        }
+        .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+        .Text{
+            font-size: 75%;
+        }
+        .MaxVidWidth{
+            max-width: 90%;
+        }
+        .TextPassenVideos {
+            font-size: 130%;
+        }
+        .Ebene1 {
+            font-size: 7vw;
+        }
+        .Ebene2 {
+            font-size: 0.8em;
+            display: none;
+        }
+        #openUeberUns:checked + .ClickHoverUeberUns .Ebene2 {
+            display: block;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .Ebene2 {
+            display: block;
+        }
+        .Ebene1 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {padding-left: 10%;}
+        #openUeberUns:checked + .ClickHoverUeberUns .ArrowUeberUns {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .ArrowAngebote {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        nav {display: none;}
+        .linie{
+            width: 60px;
+            height: 6px;
+            background-color: white;
+            border-radius: 3px;
+            position: absolute;
+        }
+        .rahmen {
+            width: initial;
+            height: 66px;
+            padding-right: 10px;
+            background: rgb(33,46,83);
+            cursor: pointer;
+            position: relative;
+        }
+        #click {display: none;}
+        #click:checked ~ nav {display: block;}
+        #click:checked ~ label .einsham {transform: rotate(-45deg);top: 30px;transition: transform 0.5s;}
+        #click:checked ~ label .zweiham {opacity: 0;}
+        #click:checked ~ label .dreiham {transform: rotate(45deg);top: 30px;transition: transform 0.5s;}
+        .einsham {top: 12px;}
+        .zweiham {top: 30px;}
+        .dreiham {top: 48px;}
+        #click:checked ~ nav .Ebene1 {
+            animation: move 1s forwards;
+        }
+        @keyframes move{
+            0% {width:0px;}
+            100% {width: 100%;}
+        }
+        .Ebene1{
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .FuschPadding{
+            padding-top:70px;
+        }
+        .Flex-Titel {
+            display: none;
+        }
+        }
+        /*großes Handy*/
+        @media screen and (max-width: 426px) and (min-width: 400px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        .handy-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Überschrift {
+            font-size: 300%;
+            margin-top: 0;
+        }
+        .Ebene1 {
+            font-size: 7vw;
+        }
+        .Ebene2 {
+            font-size: 0.8em;
+            display: none;
+        }
+        #openUeberUns:checked + .ClickHoverUeberUns .Ebene2 {
+            display: block;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .Ebene2 {
+            display: block;
+        }
+        .Ebene1 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {padding-left: 10%;}
+        #openUeberUns:checked + .ClickHoverUeberUns .ArrowUeberUns {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .ArrowAngebote {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        nav {display: none;}
+        .linie{
+            width: 60px;
+            height: 6px;
+            background-color: white;
+            border-radius: 3px;
+            position: absolute;
+        }
+        .rahmen {
+            width: initial;
+            height: 66px;
+            padding-right: 10px;
+            background: rgb(33,46,83);
+            cursor: pointer;
+            position: relative;
+        }
+        #click {display: none;}
+        #click:checked ~ nav {display: block;}
+        #click:checked ~ label .einsham {transform: rotate(-45deg);top: 30px;transition: transform 0.5s;}
+        #click:checked ~ label .zweiham {opacity: 0;}
+        #click:checked ~ label .dreiham {transform: rotate(45deg);top: 30px;transition: transform 0.5s;}
+        .einsham {top: 12px;}
+        .zweiham {top: 30px;}
+        .dreiham {top: 48px;}
+        #click:checked ~ nav .Ebene1 {
+            animation: move 1s forwards;
+        }
+        @keyframes move{
+            0% {width:0px;}
+            100% {width: 100%;}
+        }
+        .Ebene1{
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .FuschPadding{
+            padding-top:70px;
+        }
+        .Flex-Titel {
+            display: none;
+        }
+       
+    }
+        /*Tablet*/
+        @media screen and (max-width: 1200px) and (min-width: 426px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        .Ebene1 {
+            font-size: 5vw;
+        }
+        .Ebene2 {
+            font-size: 0.9em;
+            display: none;
+        }
+        #openUeberUns:checked + .ClickHoverUeberUns .Ebene2 {
+            display: block;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .Ebene2 {
+            display: block;
+        }
+        .Ebene1 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {border-bottom: 1px solid white;}
+        .Ebene2 > li {padding-left: 10%;}
+        #openUeberUns:checked + .ClickHoverUeberUns .ArrowUeberUns {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        #openAngebote:checked + .ClickHoverAngebote .ArrowAngebote {
+            display: inline-block;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        nav {display: none;}
+        .linie{
+            width: 60px;
+            height: 6px;
+            background-color: white;
+            border-radius: 3px;
+            position: absolute;
+        }
+        .rahmen {
+            width: initial;
+            height: 66px;
+            padding-right: 10px;
+            background: rgb(33,46,83);
+            cursor: pointer;
+            position: relative;
+        }
+        #click {display: none;}
+        #click:checked ~ nav {display: block;}
+        #click:checked ~ label .einsham {transform: rotate(-45deg);top: 30px;transition: transform 0.5s;}
+        #click:checked ~ label .zweiham {opacity: 0;}
+        #click:checked ~ label .dreiham {transform: rotate(45deg);top: 30px;transition: transform 0.5s;}
+        .einsham {top: 12px;}
+        .zweiham {top: 30px;}
+        .dreiham {top: 48px;}
+        #click:checked ~ nav .Ebene1 {
+            animation: move 1s forwards;
+        }
+        @keyframes move{
+            0% {width:0px;}
+            100% {width: 100%;}
+        }
+        .Ebene1{
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .FuschPadding{
+            padding-top:70px;
+        }
+        .Flex-Titel {
+            display: none;
+        }
+        }
+        [type="checkbox"] {display: none;}
+        .paddingHeadKQ {
+            padding: 0%;
+        }
     </style>
     <script>
         var hashtag = window.location.hash
@@ -260,27 +620,45 @@
 </head>
 
 <body>
-    <header class="end blue flexbox container padding paddingHead">
-        <p><span class="Boxfont header white">Orchester Kreuz & Quer</span></p>
-        <div class="">
-            <div class="dropdown">
-                <a class="box Boxfont white js-scroll" href="#Ueber_uns">Über uns <i class="fa fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a class="js-scroll" href="#Ueber_uns">Über uns</a></li>
-                    <li><a class="js-scroll" href="#Wir_suchen_dich">Wir suchen dich!</a></li>
-                    <li><a class="js-scroll" href="#Unser_Orchester">Unser Orchester</a></li>
-                </ul>
+    <header class="blue">
+        
+        <input type="checkbox" id="click">
+        <label for="click">
+            <div class="paddingLinks">
+                <div class="linie einsham"></div>
+                <div class="linie zweiham"></div>
+                <div class="linie dreiham"></div>
             </div>
-            <div class="dropdown">
-                <a class="box Boxfont white" href="#">Unsere Angebote<i class="fa fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a class="js-scroll" href="#Musikstuecke">Musikstücke</a></li>
-                    <li><a href="/Termine.html">Termine</a></li>
-                    <li><a class="" href="/Ausbildung.html">Ausbildung</a></li>
-                </ul>
-            </div>
-            <a class="header white box Boxfont" href="/Interesse.html">Interesse?</a>
-        </div>
+        </label>
+        <nav class="menu">
+                <ul class="FuschPadding white blue Flex-Nav ListStyle white Ebene1">
+                    <div>
+                        <p class="white Flex-Titel">Orchester<br> Kreuz und Quer</p>
+                    </div>
+                <input type="checkbox" id="openUeberUns">
+                <li class="FuschPaddingTitel ClickHoverUeberUns"><label for="openUeberUns">Über uns<span class="ArrowUeberUns">&#129083;</span></label>
+                    <ul class="ListStyle Ebene2">
+                        <li><a href="#Ueber_uns">Über uns</a></li>
+                        <li><a href="#Wir_suchen_dich">Wir suchen dich!</a></li>
+                        <li><a href="#Unser_Orchester">Unser Orchester</a></li>
+                    </ul>
+                </li>
+                <input type="checkbox" id="openAngebote">
+                <li class="FuschPaddingTitel ClickHoverAngebote"><label for="openAngebote">Unser Angebote<span class="ArrowAngebote">&#129083;</span></label>
+                    <ul class="Ebene2 ListStyle">
+                        <li><a href="#Musikstuecke">Musikstücke</a></li>
+                        <li><a href="/Termine.html#Termine">Termine</a></li>
+                        <li><a href="/Ausbildung.html">Ausbildung</a></li>
+                    </ul>        
+                </li>
+                <li><a class="FuschPaddingTitel" href="/Interesse.html">Interesse?</a></li>
+            </ul>
+        </nav>
+            
+        
+        
+        
+        
     </header>
     <div id="KQ"></div>
     <div class="white schwarz">
@@ -300,16 +678,16 @@
     </div>
     <hr>
     <div class="boxing platz">
-    <p id="Wir_suchen_dich"> <a class="platz js-scroll Unterüberschrift" href="#KQ"> Wir suchen dich!</a></p>
+    <p id="Wir_suchen_dich"> <a class="black  js-scroll Unterüberschrift" href="#KQ"> Wir suchen dich!</a></p>
     <p><span class="Text"> Ein Orchester kann nur ein Orchester sein, wenn genug Leute mitspielen. Das ist genau wie bei einem Fußball Verein. Ist kein Angriff vorhanden können keine Tore geschossen
          werden. So ist das in einem Orchester auch. Ist eine Sektion wie z.B. das tiefe Blech (Posaune, Tuba und co.) nicht vorhanden fehlt im Orchester etwas, weshalb es sich dann 
-         nicht mehr gut anhört. Wir benötigen im Moment am meisten <span class="fett">Schlagzeuger, Tubisten und Trompeten.</span> Alle anderen sind aber auch herzlich willkommen, da mehr meist nie schlechter :)
+         nicht mehr gut anhört. Wir benötigen im Moment am meisten <span class="fett">Schlagzeuger, Tubisten und Trompeten.</span> Alle anderen sind aber auch herzlich willkommen, da mehr meist nie schlechter ist :)
          <br>Wenn ihr ein Instrument lernen wollt, bieten wir Unterricht von unseren Lehrern und der Musikschule an. Das kommt immer auf das Instrument an. Hier kann für ein paar 
          Wochen auch Schnupperunterricht genommen werden um sich das ganze einfach mal anzugucken.</span></p>
     </div>
     <hr>
     <div class="platz grau boxing">
-        <h2 id="Unser_Orchester"><a class="Überschrift unterstrichen js-scroll" href="#KQ"> Unser Orchester</a></h2>
+        <h2 id="Unser_Orchester"><a class="black Überschrift unterstrichen js-scroll" href="#KQ"> Unser Orchester</a></h2>
         <p><span class="Unterüberschrift">Unsere Dirigentin</span></p>
         <div class="flex"><p><span class="Text">Unsere Dirigentin <span class="fett">Rianne Damhuis</span> bereist uns für jede Probe aus der Niederlande und leitet unser Orchester seit unserer Existenz.    
             Sie bereitet uns immer wieder Freude mit neuen, lustigen und kreativen Eselsbrücken und einem lockeren Umgang mit dem Orchester.
@@ -343,30 +721,30 @@
     </div>
     <hr>
     <div class="boxing platz">
-        <p id="Musikstuecke"><a class="js-scroll Unterüberschrift" href="#KQ">Musikstücke</a></p>
+        <p id="Musikstuecke"><a class="black js-scroll Unterüberschrift" href="#KQ">Musikstücke</a></p>
         <p><span class="Text">Hier findest du ein paar Links zu Stücken, die wir gespielt haben, damit du ein kleinen Einblick in unsere Programmstücke
              und Musikrichtung bekommen kannst: </span></p>
-        <div class="container container2 flex"> 
-            <div class="">
-                <p><span class="Text fett">Oregon</span></p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/to3gePlszMY" title="Oregon – Jacob de Haan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="">
-                <p><span class="Text fett">The Lion King</span></p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/WEEDErl0wlI" title="The Lion King arranged by John Higgins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div>
-                <p><span class="Text fett">Moment for Morricone</span></p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/4D5xuGOaCCk" title="Moment for Morricone - Ennio Morricone/Arr. Johan de Meij" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div>
-                <p><span class="Text fett">Highlights from Aladdin</span></p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/VBVqn_uCz9Y" title="Highlights from Aladdin by Alan Menken/arr. Michael Sweeney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div>
-                <p><span class="Text fett">Coldplay Classics</span></p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/aOaKAx7W-QQ" title="Coldplay Classics arranged by Michael Brown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+        <div class="flexwarp flex-videos flex handy-center"> 
+                <div class="">
+                    <p><span class="TextPassenVideos Text fett">Oregon</span></p>
+                    <iframe class="MaxVidWidth" width="320" height="240" src="https://www.youtube.com/embed/to3gePlszMY" title="Oregon – Jacob de Haan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="">
+                    <p><span class="TextPassenVideos Text fett">The Lion King</span></p>
+                    <iframe class="MaxVidWidth" width="320" height="240" src="https://www.youtube.com/embed/WEEDErl0wlI" title="The Lion King arranged by John Higgins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p><span class="Text TextPassenVideos fett">Moment for Morricone</span></p>
+                    <iframe class="MaxVidWidth" width="320" height="240" src="https://www.youtube.com/embed/4D5xuGOaCCk" title="Moment for Morricone - Ennio Morricone/Arr. Johan de Meij" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p><span class="Text TextPassenVideos fett">Highlights from Aladdin</span></p>
+                    <iframe class="MaxVidWidth" width="320" height="240" src="https://www.youtube.com/embed/VBVqn_uCz9Y" title="Highlights from Aladdin by Alan Menken/arr. Michael Sweeney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p><span class="Text TextPassenVideos fett">Coldplay Classics</span></p>
+                <iframe class="MaxVidWidth" width="320" height="240" src="https://www.youtube.com/embed/aOaKAx7W-QQ" title="Coldplay Classics arranged by Michael Brown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>        
         </div>
     </div>
     <hr>

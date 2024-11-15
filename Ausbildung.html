@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kreuz und Quer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+        <style>
         *{
             box-sizing: border-box;
         }
         header {
-            height: 100px;
+            height: 150px;
             position: sticky;
             top: 0;
         }
@@ -31,7 +31,6 @@
             font-weight: bold;
         }
         .flex {
-            display: flex;
             gap: 30px;
         }
         .flexbox {
@@ -42,7 +41,7 @@
             font-size: 150%;
         }
         .Überschrift {
-            font-size: 400%;
+            font-size: 380%;
             margin-top: 0;
         }
         .image-right {
@@ -80,6 +79,12 @@
         .container2 {
             justify-content: space-evenly;
         }
+        .flex-videos{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
         a {
             color: rgb(0, 0, 0);
             text-decoration: none;
@@ -92,7 +97,7 @@
             transition: 1s;
         }
         .box {
-            background-color: transparent;
+           /* background-color: transparent; +*/
             width: 120px;
             padding: 30px;
             margin: 0px;
@@ -153,10 +158,7 @@
         .footerNav{
             margin: 30px 0;
         }
-        .footerNav ul{
-            display: flex;
-            justify-content: center;
-        }
+        
         .footerNav ul li a{
             color: white;
             margin: 20px;
@@ -221,9 +223,126 @@
             background-color: #1f36bb;
             transition: 1s;
         }
-
+        /*PC*/
+        @media(min-width: 1200px){
+            .flex {
+                display: flex;
+            }
+            .footerNav ul{
+                display: flex;
+                justify-content: center;
+        }
+        .flex-PC-Videos {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        }
+        /*Kleines Handy*/
+        @media(max-width: 400px){
+            .Unterüberschrift{
+                font-weight: bold;
+                font-size: 150%;
+            }
+            .Überschrift {
+            font-size: 200%;
+            margin-top: 0;
+        }
+        .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+        .Text{
+            font-size: 75%;
+        }
+        .MaxVidWidth{
+            max-width: 90%;
+        }
+        .TextPassenVideos {
+            font-size: 130%;
+        }
+        }
+        /*Großes Handy*/
+        @media screen and (max-width: 426px) and (min-width: 400px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        .handy-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Überschrift {
+            font-size: 300%;
+            margin-top: 0;
+        }
+        .Unterüberschrift {
+            font-size: 220%;
+            font-weight: bold
+        }
+    }
+        /*Tablet*/
+        @media screen and (max-width: 1200px) and (min-width: 426px){
+            .image-right {
+                padding: 20px 0 0px 0px;
+                width: 100%;
+        }
+            .image-Dirigent {
+            width: 100%;            
+            padding: 20px 0 0px 0px;    
+        }
+            .image-Aufbauorchester {
+            width: 100%;
+            padding: 20px 0 0px 0px;
+        }
+            .flexbox {
+                display: flex;
+                gap: 40px;
+        }
+            .box {
+                width: 20px;
+                padding: 0px;
+                margin: 0px;
+        }
+        .footerNav ul{
+            text-align: center;
+            justify-content: center;
+        }
+        }
     </style>
+<!--JAVA-SCRIPT-->
     <script>
+    //Hashtag loswerden
         var hashtag = window.location.hash
         window.location.hash = ""
         document.addEventListener("DOMContentLoaded", () => {
@@ -259,11 +378,12 @@
     </script>
 </head>
 <body>
+    <!--HEADER-->
     <header class="end blue flexbox container padding paddingHead">
         <p><span class="Boxfont header white">Orchester Kreuz & Quer</span></p>
         <div class="">
             <div class="dropdown">
-                <a class="box Boxfont white" href="/Index.html#Ueber_uns">Über uns <i class="fa fa-caret-down"></i></a>
+                <a class="box Boxfont white" href="">Über uns <i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a class="" href="/Index.html#Ueber_uns">Über uns</a></li>
                     <li><a class="" href="/Index.html#Wir_suchen_dich">Wir suchen dich!</a></li>
@@ -271,7 +391,7 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <a class="box Boxfont white" href="#">Unsere Angebote<i class="fa fa-caret-down"></i></a>
+                <a class="box Boxfont white" href="">Unsere Angebote<i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a class="" href="/Index.html#Musikstuecke">Musikstücke</a></li>
                     <li><a href="/Termine.html">Termine</a></li>
@@ -281,6 +401,8 @@
             <a class="boxing white box Boxfont" href="/Interesse.html">Interesse?</a>
         </div>
     </header>
+<!--AUSBILDUNGEN BEIM K&Q-->
+    <!--Grundausbildung-->
     <div>
         <h1 id="Ausbildung" class="Überschrift platz unterstrichen grau">Ausbildungen beim Kreuz und Quer</h1>
         <div class="platz">
@@ -288,24 +410,28 @@
             <p><span class="Text fett">Details:</span><br><span class="Text">- Unterricht für die Grundlagen des eigenen Instrument <br>- Grundvorbereitung auf das Aufbauorchester 
                 <br>- Findet jede Woche in den Räumen des Kreuz und Quers statt</span></p>
         </div>
+        <!--D1-->
         <div class="grau platz">
             <h3 class="platz Unterüberschrift">D1-Lehrgang</h3>
             <p><span class="Text fett">Details:</span><span class="Text"><br>- Prüfung für angehende Musiker, die schon ein wenig Spielerfahrung haben<br>- Grundwissen in Musik Theorie<br> 
                 - Erste praktische Erfahrung mit Tonleiter Übungen und Vortragsstücken wie Volkslieder und Etüden<br> - wird mit Prüfung in Praxis und Theorie beendet
                 <br>- offizielle Anerkennung des deutschen Volksmusikerbund</span></p>
         </div>
+        <!--D2-->
         <div class="platz">
             <h4 class="Unterüberschrift platz">D2-Lehrgang</h4>
             <p><span class="Text fett">Details:</span><span class="Text"><br> - Prüfung für forgeschrittene Musiker<br> - Tiefere Weiterbildung der D1 Themen und Kontakt mit Moll-Tonarten 
             <br>- Praxis Weiterbildung von D1 Themen und Kontakt mit Moll-Tonleitern<br> - wird wie alle anderen D-Lehrgänge auch mit Prüfung in Praxis sowie Theorie beendet
             <br>- Zugang zum großen Orchester<br>- offiziele Anerkennung des deutschen Volksmusikerbund</span></p>
         </div>
+        <!--D3-->
         <div class="grau platz">
             <h5 class="Unterüberschrift platz">D3-Lehrgang</h5>
             <p><span class="Text fett">Details:</span><span class="Text"><br>- für sehr fortgeschrittene Musiker<br>- Alle wichtigen Theorie und Praxis Themen in Richtung Musik als Hobby
                 <br>-sehr fortgeschrittene Prüfung in Theorie und Praxis<br>- offizielle Annerkung des Volksmusikerbund</span></p>
         </div>
     </div>
+<!--FOOTER-->
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -328,7 +454,9 @@
             <p>Copyright &copy;2024; Designed by <span class="designer">Gerrit Wielens</span></p>
         </div>
     </footer>
+<!--JAVA-SCRIPT-->
     <script>
+    //Scroll-Funktion
         var eins=document.getElementsByClassName("js-scroll");
         console.log(eins);
         function a(event){
